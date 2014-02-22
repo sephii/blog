@@ -26,6 +26,8 @@ LINKS = ()
 SOCIAL = (('Github', 'https://github.com/sephii/'),
           ('Twitter', 'https://twitter.com/roflmaokthxbye'),)
 
+DISQUS_SITENAME = 'iwillnotreadthisblogitisscratched'
+
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
