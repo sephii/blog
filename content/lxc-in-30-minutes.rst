@@ -4,6 +4,15 @@ Setting up LXC containers in 30 minutes (Debian Wheezy)
 :date: 2013-01-11
 :category: Sysadmin
 
+.. highlights::
+
+    **Update**
+
+    Vagrant has an `LXC plugin <https://github.com/fgrehm/vagrant-lxc>`_ that
+    allows you to run containers instead of VMs in an almost transparent manner.
+    Most of this guide still applies if you need to setup the networking for your
+    containers or enable cgroups.
+
 Why LXC?
 --------
 
@@ -13,7 +22,7 @@ is what we usually use as target servers. I used to use chroots for this, but I
 found them painful to manage, especially when running daemons on the same ports
 than on the host machine.
 
-People like to use virtualization for this, such as !VirtualBox (esp. with
+People like to use virtualization for this, such as VirtualBox (esp. with
 Vagrant) but I didn't want that since it forces you to start a whole virtual
 machine every time you want to develop. Running a virtual machine is quite a
 heavy process and they constantly use resources even if they don't do anything.
@@ -133,7 +142,7 @@ container and reinstall ssh::
 
     apt-get install --reinstall openssh-server
 
-Now you should be able to ssh to your container from your host:
+Now you should be able to ssh to your container from your host::
 
     ssh root@192.168.122.2
 
